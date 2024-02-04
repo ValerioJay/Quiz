@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="col-lg-4" layout:fragment="body">
+        <h1>Quiz Terminato</h1>
+        <p>
+            Hai indovinato <label th:text="${punteggio}"></label> su <label th:text="${totale}"></label>.
+        <a th:href="@{/home}">Torna al Menù principale</a>
+    </div>
+    <script th:src="@{/js/risposta.js}"></script>
+</body>
+
+</html>

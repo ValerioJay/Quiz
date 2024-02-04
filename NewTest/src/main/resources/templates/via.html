@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Quiz!</title>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<div class="col-lg-4" layout:fragment="body">
+		<h2>GO!!!</h2>
+
+
+		<form id="rispondi" >
+			<h2>Domanda:</h2>
+			<label th:text="${domanda.testoDomanda}" id="domanda"></label>
+		<br><br>
+		<h2>Risposte:</h2>
+		
+				
+				<label th:text="${risposte.get(0).testoRisposta}" id="risposta1"></label> 
+				<input type="radio" name="flag" id="vero1"required><br>
+				
+				<label th:text="${risposte.get(1).testoRisposta}" id="risposta2"></label> 
+				<input type="radio" name="flag" id="vero2"required><br>
+				
+				<label th:text="${risposte.get(2).testoRisposta}" id="risposta3"></label> 
+				<input type="radio" name="flag" id="vero3"required><br>
+				
+				<label th:text="${risposte.get(3).testoRisposta}" id="risposta4"></label> 
+				<input type="radio" name="flag" id="vero4"required><br>
+		
+		<button type="submit">Rispondi</button> <label>Giuste: </label><label id="punteggio"></label>
+		</form>
+		<br><br>
+		<div style="text-align: center;">
+    <a th:href="@{/home}">Torna al Menù principale</a>
+</div>
+		 
+	</div>
+	<script th:src="@{/js/risposta.js}"></script>
+</body>
+
+</html>

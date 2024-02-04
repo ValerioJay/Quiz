@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Quiz!</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="col-lg-4" layout:fragment="body">
+	<h2>Cancella</h2>
+
+	<nav>
+		<a th:href="@{/home}">|Home|</a>
+		
+		<a th:href="@{/inserisci}">|Inserisci Domanda|</a>
+		
+		<a th:href="@{/gioca}">|Gioca|</a>
+	</nav>
+</div>
+<div class="container"/>
+<script th:src="@{/js/modifica.js}"></script>
+</body>
+
+</html>

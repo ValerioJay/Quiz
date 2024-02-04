@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Quiz!</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="col-lg-4" layout:fragment="body">
+ <h2>Inserisci Domanda</h2>
+
+ 	 <nav >
+        <a th:href="@{/home}">|Home|</a>
+        
+        <a th:href="@{/modifica}">|Cancella Domanda|</a>
+        
+        <a th:href="@{/gioca}">|Gioca|</a>
+        
+       
+    </nav>
+    
+				<form method="post" id="inserisci"  >
+					
+						<label class="form-label">Inserisci testo domanda</label><br>
+						<input type="text" class="form-control" id="domanda" name="testoDomanda" required>
+						<br><br>
+						<label> Risposta 1
+						<input type="radio" id="vero1" name="numero"  value="1" checked>
+						<input type="text" class="form-control" id="risposta1" name="testoRisposta1" required>
+						
+						
+						
+						</label>
+						<label> Risposta 2
+							<input type="radio" id="vero2" name="numero" value="2">
+							<input type="text" class="form-control"id="risposta2" name="testoRisposta2"  required>
+						
+						
+						
+						</label>
+						<label> Risposta 3 
+							<input type="radio" id="vero3" name="numero" value="3">
+							<input type="text" class="form-control" id="risposta3" name="testoRisposta3"  required>
+						
+						
+						
+						</label>
+						<label> Risposta 4
+							<input type="radio"  id="vero4" name="numero" value="4">
+							<input type="text" class="form-control" id="risposta4" name="testoRisposta4"  required>
+						
+						
+						</label>
+						
+						<button type="submit">Salva Domanda</button>
+						
+						</form>
+					<script th:src="@{/js/inserisci.js}"></script>
+					
+</div>
+</body>
+</html>

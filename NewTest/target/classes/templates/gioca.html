@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Quiz!</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.centered-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+			/* Altezza desiderata */
+		}
+
+		.centered-button button {
+			font-size: 20px;
+			/* Dimensione del testo desiderata */
+			padding: 10px 20px;
+			/* Padding desiderato */
+		}
+	</style>
+</head>
+
+<body>
+	<div class="col-lg-4" layout:fragment="body">
+		<h2>Gioca</h2>
+
+		<nav>
+			<a th:href="@{/home}">|Home|</a>
+
+			<a th:href="@{/inserisci}">|Inserisci Domanda|</a>
+
+			<a th:href="@{/modifica}">|Cancella Domanda|</a>
+
+			
+		</nav>
+			<br> <br> <br> <br>
+		<div class="centered-button">
+			<form method="get" th:action="@{/via}">
+				<button type="submit">GO!</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
